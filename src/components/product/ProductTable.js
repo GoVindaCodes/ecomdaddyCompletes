@@ -149,7 +149,7 @@ const ProductTable = ({ products, isCheck, setIsCheck, currency, lang, globalSet
               <span className="text-sm">{product.stock}</span>
             </TableCell>
             <TableCell>
-              {product.quantity > 0 ? (
+              {product.quantity || product.stock > 0 ? (
                 <Badge type="success">{t("Selling")}</Badge>
               ) : (
                 <Badge type="danger">{t("SoldOut")}</Badge>
